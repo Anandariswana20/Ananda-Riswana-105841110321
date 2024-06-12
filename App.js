@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import React from 'react';
+import ButtonComponent from './component/button/button'
 
 const App = () => {
   return (
@@ -78,30 +79,8 @@ const App = () => {
           alignItems: 'center',
           marginBottom: 50,
         }}>
-          <View style={{ marginHorizontal: 10 }}>
-            <Text style={{
-              width: 100,
-              height: 50,
-              color: 'white',
-              backgroundColor: '#007bff',
-              textAlign: 'center',
-              lineHeight: 50,
-              fontSize: 20,
-              borderRadius: 10,
-            }}>Login</Text>
-          </View>
-          <View style={{ marginHorizontal: 10 }}>
-            <Text style={{
-              width: 100,
-              height: 50,
-              color: 'white',
-              backgroundColor: '#28a745', 
-              textAlign: 'center',
-              lineHeight: 50,
-              fontSize: 20,
-              borderRadius: 10,
-            }}>Register</Text>
-          </View>
+          <ButtonComponent title= "Sign In" color="blue" />
+          <ButtonComponent title= "Sign Up" color="tomato" />
         </View>
       </ScrollView>
     </View>
