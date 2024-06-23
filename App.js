@@ -1,90 +1,35 @@
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
-import React from 'react';
-import ButtonComponent from './component/button/button'
+import { Text, View, Image, TextInput } from 'react-native'
+import React from 'react'
 
 const App = () => {
-  return (
-    <View style={{
-      flex: 1,
-      backgroundColor: '#000', // To blend with the background image
-    }}>
-      <Image
-        source={require('./assets/shooping.jpg')}
-        style={{
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          opacity: 0.5,
-          zIndex: -1,
-        }}
-        resizeMode="cover"
+  const Inputan = ({ nama, color })=>{
+    return(
+      <TextInput
+      placeholder={`Masukan ${nama}`}
+      style ={{
+        borderWidth: 1,
+        borderColor: 'pink',
+        borderRadius: 10,
+        width: 300,
+        height: 50,
+        marginVertical: 10,
+        padding: 10,
+        backgroundColor: 'white',
+        color:color,
+      }}
       />
-      <ScrollView contentContainerStyle={{
-        flexGrow: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-      }}>
-        <Image 
-          source={require('./assets/LogoNs.jpg')} 
-          style={{
-            width: 100,
-            height: 100,
-            marginTop: 50,
-            marginRight: 150,
-            opacity: 1,
-            zIndex: 1,
-            borderRadius: 100,
-          }}
-        />
-        <Text style={{
-          color: 'white',
-          fontSize: 28,
-          fontWeight: '300',
-          textAlign: 'center',
-          marginTop: 20,
-          fontWeight: 'bold'
-        }}>
-          Welcome To MyNs (Nndshoop) 
-        </Text>
-        <Text style={{
-          color: 'white',
-          fontSize: 15,
-          textAlign: 'center',
-          marginTop: 20,
-        }}>
-          Untuk gadis-gadisku yang tersayang🌷shooping merupakan suatu hal yang populer dan sudah menjadi bagian dari hidup seorang wanita. Kali ini kami hadir untuk untuk membuat kalian semua tidak repot lagi dalam hal mencari barang-barang yang akan menjadi incaran gadis-gadis yang lain ceunahhhh🌷🛍.
-        </Text>
-        <Text style={{
-          color: 'white',
-          fontSize: 15,
-          textAlign: 'center',
-          marginTop: 20,
-        }}>
-          Kami hadir dengan kualitas yang terbaik, ori, tercepat, dan 100% barang-barang kami limitid edition ceunahh🌷🛍
-        </Text>
-        <Text style={{
-          color: 'white',
-          fontSize: 15,
-          textAlign: 'center',
-          marginTop: 20,
-          marginBottom: 20,
-          fontWeight : 'bold'
-        }}>
-           "Cerita horor terpendek yang pernah ada: sold out💳💸"
-        </Text>
-        <View style={{
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginBottom: 50,
-        }}>
-          <ButtonComponent title= "Sign In" color="blue" />
-          <ButtonComponent title= "Sign Up" color="tomato" />
-        </View>
-      </ScrollView>
+    )
+  }
+  return (
+    <View style = {{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Inputan nama= "Email" color = "pink"/>
+      <Inputan nama= "Username" color = "pink"/>
+      <Inputan nama= "Password" color = "pink"/>
     </View>
-  );
-};
-
+  )
+}
 export default App;
