@@ -1,35 +1,30 @@
-import { Text, View, Image, TextInput } from 'react-native'
+import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 
-const App = () => {
-  const Inputan = ({ nama, color })=>{
-    return(
-      <TextInput
-      placeholder={`Masukan ${nama}`}
-      style ={{
-        borderWidth: 1,
-        borderColor: 'pink',
-        borderRadius: 10,
-        width: 300,
-        height: 50,
-        marginVertical: 10,
-        padding: 10,
-        backgroundColor: 'white',
-        color:color,
-      }}
-      />
-    )
-  }
+const InputCostum = ({nama, color}) => {
   return (
-    <View style = {{
-      flex: 1,
+    <TextInput
+    placeholder={`Masukan ${nama}`}
+    style={{
+      height: 40,
+      borderColor: color,
+      borderWidth: 1,
+      width: 200,
+      padding: 10,
+      margin: 10, // Proper margin value
+    }}/>
+  )
+}
+
+const App = () => {
+  return (
+    <View style={{    flex: 1,
       justifyContent: 'center',
-      alignItems: 'center',
-    }}>
-      <Inputan nama= "Email" color = "pink"/>
-      <Inputan nama= "Username" color = "pink"/>
-      <Inputan nama= "Password" color = "pink"/>
+      alignItems: 'center'}}>
+     <InputCostum nama='email' color='pink'/>
+     <InputCostum nama='email' color='pink'/>
+     <InputCostum nama='email' color='pink'/>
     </View>
   )
 }
-export default App;
+export default App
