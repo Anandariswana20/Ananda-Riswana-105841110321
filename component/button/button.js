@@ -7,7 +7,6 @@ const ButtonComponent = ({ title, color}) => {
         marginHorizontal: 10,
         alignItems: 'center',
         justifyContent: 'start',
-        justifyContent: 'center',
         marginVertical: 10
       }}>
         <Text style={{
