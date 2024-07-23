@@ -4,7 +4,7 @@ import React from 'react';
 const Inputan = ({nama, color})=>{
     return(
         <TextInput
-            placeholder={'${nama}'}
+            placeholder={`${nama}`}
             placeholderTextColor={'rgba(0, 0, 0, 0.5)'}
             style={{
                 borderWidth: 1,
@@ -24,7 +24,8 @@ const Inputan = ({nama, color})=>{
                 textAlignVertical: 'top',
                 textAlign: 'left'
             }}
-            secureTextEntry = {nama === 'password'}
+            secureTextEntry = {nama === 'Password'}
+
         />
 
     )

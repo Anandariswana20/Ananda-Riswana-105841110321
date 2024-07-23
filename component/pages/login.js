@@ -35,8 +35,8 @@ const login = () => {
             <View style = {{
                 marginBottom: 10
             }}>
-                <Inputan name="Email" color = "black"/>
-                <Inputan name="Password" color = "black"/>
+                <Inputan nama="Email" color = "black"/>
+                <Inputan nama="Password" color = "black"/>
 
                 <TouchableOpacity>
                     <Text style = {{
