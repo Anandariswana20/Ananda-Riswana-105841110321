@@ -1,6 +1,6 @@
 import { View } from 'react-native'
 import React from 'react'
-import SignUp from './component/pages/signUp'
+import ForgotPassword from './component/pages/forgotPassword'
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       flex: 1,
       backgroundColor: '#EEEEEE'
     }}>
-      <SignUp/>
+      <ForgotPassword/>
     </View>
   )
 }
