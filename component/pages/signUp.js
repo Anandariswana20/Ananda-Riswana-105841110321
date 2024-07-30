@@ -3,7 +3,7 @@ import React from 'react'
 import ButtonComponent from '../button/button'
 import Inputan from '../TextInput/input'
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
     return (
         <View style = {{
             flex: 1,
@@ -40,7 +40,8 @@ const SignUp = () => {
                 marginBottom: 30,
                 textAlign: 'right',
                 marginLeft: 175
-            }}>
+            }}
+                onPress = {() => navigation.navigate('Login')}>
                 Already have an Account?
                 </Text>
                 <ButtonComponent title = "Sign Up" color = "red" />

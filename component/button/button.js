@@ -10,14 +10,14 @@ const ButtonComponent = ({ title, color}) => {
         marginVertical: 10
       }}>
         <Text style={{
-          width: 100,
+          width: 350,
           height: 50,
           color: 'white',
           backgroundColor: color,
           textAlign: 'center',
-          lineHeight: 50,
+          lineHeight: 60,
           fontSize: 20,
-          borderRadius: 10,
+          borderRadius: 50,
           }}>{title}
           </Text>
       </View>

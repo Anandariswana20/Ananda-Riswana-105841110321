@@ -16,9 +16,6 @@ const ForgotPassword = () => {
             top: 60,
             left: 20
         }}>
-            <Image source={require('../../assets/bck.png')}
-            style = {{ width: 30, height: 30 }}
-            />
         </TouchableOpacity>
         <View style = {{
             marginBottom: 100,
