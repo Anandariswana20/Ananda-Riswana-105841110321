@@ -3,7 +3,7 @@ import React from 'react'
 import ButtonComponent from '../button/button'
 import Inputan from '../TextInput/input'
 
-const login = ({navigation}) => {
+const Login = ({navigation}) => {
     return (
         <View style = {{
             flex: 1,
@@ -29,7 +29,7 @@ const login = ({navigation}) => {
             <Inputan nama="Email" color = "black" />
             <Inputan nama="Passowrd" color = "black" />
 
-            <TouchableOpacity onPress={ () => navigation.navigate('ForgotPassword')}>
+            <TouchableOpacity onPress={ () => navigation.navigate('forgotPassword')}>
                 <Text style = {{
                     fontSize: 14,
                     color: 'black',
@@ -40,7 +40,7 @@ const login = ({navigation}) => {
                 </Text>
             </TouchableOpacity>
            </View>
-           <ButtonComponent title= "LOGIN" color = "red" />
+           <ButtonComponent title= "LOGIN" color = "red" borderRadius = {30} onPress={() => navigation.navigate('mainPage')}/>
            <Text style = {{
             fontSize: 14,
             color: 'black',
@@ -48,7 +48,13 @@ const login = ({navigation}) => {
             marginTop: 90,
             marginBottom: 20
            }}>
-            Or login with social account
+            <Text style = {{
+            fontSize: 14,
+            marginBottom: 20,
+            textAlign: 'center',
+            }}
+            />
+             Or login with social account
            </Text>
 
            <View style = {{
@@ -87,4 +93,6 @@ const login = ({navigation}) => {
            </View>
     )
 }
+
+export default Login
                 
