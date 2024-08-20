@@ -3,7 +3,7 @@ import React from 'react'
 import ButtonComponent from '../button/button'
 import Inputan from '../TextInput/input'
 
-const ForgotPassword = ({navigation}) => {
+const ForgotPassword = ({}) => {
     return (
         <View style = {{
             flex: 1,

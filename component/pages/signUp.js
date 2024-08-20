@@ -40,7 +40,7 @@ const SignUp = ({navigation}) => {
                 marginBottom: 30,
                 textAlign: 'right',
                 marginLeft: 175
-            }}onPress = {() => navigation.navigate('Login')}>
+            }}onPress = {() => navigation.navigate('login')}>
                 
                 Already have an Account?
                 </Text>

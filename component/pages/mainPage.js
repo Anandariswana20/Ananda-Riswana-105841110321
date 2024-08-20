@@ -3,8 +3,8 @@ import { View, Text, ImageBackground, StyleSheet, Dimensions, FlatList, Image, T
 import ButtonComponent from '../button/buttonMain';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import Navbar from '../Navbar/bottomNavbar';
 
+// Import gambar
 import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
 import image3 from '../../assets/image3.png';
@@ -13,7 +13,10 @@ import image5 from '../../assets/image5.png';
 import image6 from '../../assets/image6.png';
 import image7 from '../../assets/image7.png';
 
-const image = { uri: "https://retaildesignblog.net/wp-content/uploads/2013/11/Fashion-Boutique-by-KNQ-Associates-Singapore-03.jpg" }; // 'uri' untuk gambar dari URL
+// Import komponen Navbar jika ada
+// import Navbar from '../components/Navbar';
+
+const image = { uri: "https://retaildesignblog.net/wp-content/uploads/2013/11/Fashion-Boutique-by-KNQ-Associates-Singapore-03.jpg" };
 const { height } = Dimensions.get('window');
 
 const imageData = [
@@ -44,8 +47,7 @@ function MainPage({ navigation }) {
 
     return (
         <View style={{ flex: 1 }}>
-            <ImageBackground source={image}
-                style={[styles.image, { height: height * 0.5 }]}>
+            <ImageBackground source={image} style={[styles.image, { height: height * 0.5 }]}>
                 <View style={styles.overlay}>
                     <View style={styles.bottomLeft}>
                         <Text style={styles.Fashion}>Fashion Hits</Text>
@@ -78,9 +80,6 @@ function MainPage({ navigation }) {
                     )}
                     showHorizontalScrollIndicator={false}
                 />
-            </View>
-            <View style={styles.navbarContainer}>
-                <Navbar style={styles.navbar} />
             </View>
         </View>
     );
